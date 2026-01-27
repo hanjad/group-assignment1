@@ -53,6 +53,12 @@ header {
   margin-left: 60px;
 }
 
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
 .nav li a {
   text-decoration: none;
   color: var(--text-dark);
@@ -184,10 +190,12 @@ header {
 }
 
 .admission-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 30px;
+  display: flex;
+  gap: 80px;
+}
+
+.detail-group {
+  width: 50%;
 }
 
 .stage-one,
