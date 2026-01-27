@@ -1,39 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Page</title>
     <style>
-        .backg-img{
-            background-image: url(2.jpeg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .edit{
-            display: flex;
-            justify-content: center;
-            padding-top: 30px ;
-        }
-        .form{
+      .backg-img {
+        background-image: url(2.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+      }
+        
+        .form {
             line-height: 30px;
             border-radius: 2px;
             padding-left: 20px;
-            width: 100vh;
+            width: 100%;
         }
-        .edit{
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-        }
-        .head{
-            align-self: center;
-        }
+        
+        .edit {
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .head {
+        margin: 20px;
+        width: 100%;
+        text-align: center;
+      }
     </style>
-     <header>
+  </head>
+
+  <body>
+    <header>
       <div class="logo">
         <img
           src="http://shomsschools.com.ng/wp-content/uploads/2021/09/logoshoo-Copy-Copy.jpg"
@@ -53,48 +57,83 @@
       <button class="search-button">🔍</button>
     </header>
 
-    <div class="backg-img">
-        <h1 class="head">Contact</h1>
-        <div class="edit">
-            
-            <a href="index.html">Home</a>/Contact
-    
-            <div>
-   
-<div>
-    <div class="form">
-    <form action="">
-        <input type="text" placeholder="Name" >
-        <br>
-        <input type="email" placeholder="Email" maxlength="30" >
-        <br>
-        <input type="text" placeholder="Text"  >
-    </form>
-    </div>
+    <main>
+        <div class="backg-img">
+            <h1 class="head">Contact</h1>
+            <div class="edit">
+              <a href="index.html">Home</a>/<a href="contact.html">Contact</a>
+      
+              <div>
+                <div>
+                  <div class="form">
+                    <form action="">
+                      <input type="text" placeholder="Name" />
+                      <br />
+                      <input type="email" placeholder="Email" maxlength="30" />
+                      <br />
+                      <input type="text" placeholder="Text" />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
 
-        </div>
-    </div>
-    <div class="footer-group">
-        <footer>
-            <h2>Categories</h2>
+    <footer>
+      <div class="footer-group">
+        <img
+          src="http://shomsschools.com.ng/wp-content/uploads/2021/09/logoshoo.jpg"
+          alt=""
+        />
 
-            <ul>
-                <li><a href="#">Painting</a></li>
-                <li><a href="#">Drawing</a></li>
-                <li><a href="#">Sports, Games</a></li>
-                <li><a href="#">Life science</a></li>
-                <li><a href="#">Activities & Events</a></li>
-            </ul>
-        </div>
+        <p>A promise for a better tomorrow</p>
+      </div>
 
-        <hr>
+      <div class="footer-group">
+        <h2>News Letter</h2>
 
-        <div>
-            <p>&copy; copyright 2026 Shoms Schools. All rights reserved.</p>
+        <form>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
 
-            <img src="http://shomsschools.com.ng/wp-content/themes/saratov/images/icons/visa-cards.png" alt="logo">
-            
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footer-group">
+        <h2>Quick Links</h2>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-group">
+        <h2>Categories</h2>
+
+        <ul>
+          <li><a href="#">Painting</a></li>
+          <li><a href="#">Drawing</a></li>
+          <li><a href="#">Sports, Games</a></li>
+          <li><a href="#">Life science</a></li>
+          <li><a href="#">Activities & Events</a></li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div>
+        <p>&copy; copyright 2026 Shoms Schools. All rights reserved.</p>
+
+        <img
+          src="http://shomsschools.com.ng/wp-content/themes/saratov/images/icons/visa-cards.png"
+          alt="logo"
+        />
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
