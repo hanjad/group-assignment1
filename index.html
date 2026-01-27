@@ -395,23 +395,21 @@
     const slides = document.querySelectorAll('.slide');
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
-    const dots = document.querySelectorAll('.indicator'); // This is currently empty in your HTML
+    const dots = document.querySelectorAll('.indicator'); 
 
     let currentSlide = 0;
 
     function showSlide(index) {
-      // 1. Remove active class from CURRENT slide
+      
       slides[currentSlide].classList.remove('active');
 
-      // Safety check: Only try to remove 'active' from dots if dots exist
+      
       if (dots.length > 0) {
         dots[currentSlide].classList.remove('active');
       }
 
-      // 2. Update the index
       currentSlide = index;
 
-      // 3. Handle Looping
       if (currentSlide >= slides.length) {
         currentSlide = 0;
       }
@@ -419,10 +417,8 @@
         currentSlide = slides.length - 1;
       }
 
-      // 4. Add active class to NEW slide
       slides[currentSlide].classList.add('active');
 
-      // Safety check: Only add 'active' to dots if dots exist
       if (dots.length > 0) {
         dots[currentSlide].classList.add('active');
       }
