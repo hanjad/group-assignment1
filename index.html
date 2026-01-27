@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shomsschools - A promise kept, for a better society.</title>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      
+    }
+
+    /* DARK SHADED CONTACT DETAILS*/
+
+    .dark-shaded-area {
+      background: #000000;
+      height: 40px;
+    }
+
+    .dark-shaded-area p {
+      font-size: 13px;
+      color: white;
+    }
+
+    .dark-shaded-area p:hover {
+      color: rgb(255, 210, 32);
+      cursor: pointer;
+    }
+
+    .dark-shaded-area-overlay {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 40px;
+    }
+
+    .dark-shaded-area-left {
+      display: flex;
+      gap: 30px;
+    }
+
+    .dark-shaded-area-left>p:first-child {
+      border-right: 1px solid grey;
+      padding-right: 20px;
+    }
+
+
+    /*NAV SECTION*/
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(229, 222, 213);
+      height: 80px;
+      gap: 100px;
+    }
+
+    .nav-logo>a>img {
+      height: 70px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-bar>.nav-links>li {
+      list-style-type: none;
+    }
+
+    .nav-bar>.nav-links>li>a {
+      text-decoration: none;
+      color: black;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .nav-bar>.nav-links>li>a:hover {
+      color: rgb(7, 149, 215);
+    }
+
+
+    /*HERO SECTION*/
+
+    .hero-slider {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+    }
+
+    .slides-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    /* Image Slides */
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* active slide */
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    /* Dark Overlay */
+    .hero-overlay {
+      width: 100%;
+      height: 100%;
+      background: rgba(96, 92, 92, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero.content {
+      padding: 20px;
+    }
+
+    /* Navigation Arrows */
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(45, 44, 44, 0.3);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      color: white;
+      font-size: 2rem;
+      transition: background 0.3s;
+    }
+
+    .slider-arrow:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+    /* Button */
+    .hero.content a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 25px;
+      background-color: rgb(244, 199, 19);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px 0px 5px 0px;
+    }
+
+
+    /*OUR CLASSES STYLING*/
+
+    .our-classes{
+      display: flex;
+      justify-content: center;
+
+    }
+    .our-classes-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      width: 60%;
+    }
+
+    .our-classes-1{
+      text-align: center;
+      padding: 100px 0px 50px 0px;
+
+    }
+
+    .our-classes-2{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .middle > img {
+      height: 200px;
+      width: auto;
+    }
+
+    .left {
+      text-align: right;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!--Dark Shaded-->
+  <section class="dark-shaded-area">
+    <div class="dark-shaded-area-overlay">
+      <div class="dark-shaded-area-left">
+        <p class="right-border">Admin@Shomschools.Com.Ng</p>
+        <p>Call Us Now: 09123423422, 070123123123, 08123456781</p>
+      </div>
+      <div class="dark-shaded-area-right">
+        <p>Login</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Nav Section-->
+  <nav class="nav-bar">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="media/logoshoo.jpg" alt="">
+      </a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="admissions.html">ADMISSIONS</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero-slider">
+
+    <!-- Navigation Arrows -->
+    <button class="slider-arrow prev">❮</button>
+    <button class="slider-arrow next">❯</button>
+
+    <div class="slides-container">
+
+      <div class="slide active" style="background-image: url('media/5-1.jpg');">
+        <div class="hero-overlay">
+          <div class="hero content">
+            <img src="Media/content-image-1.png" alt="">
+            <p>Welcome To Shoms Schools</p>
+            <h3>SHOMS - WHITESPRING - SUNNYSIDE</h3>
+            <p>A Promise Kept, For A Better Society!</p>
+            <a href="#">LET'S GO</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+
+      <div class="slide" style="background-image: url('Media/a3acc8cd-a52e-49ad-ba71-78e4eb3e7e47.jpg');">
+        <div class="hero-overlay">
+          <div class="hero content">
+            <img src="" alt="">
+            <p>Welcome To Shoms Schools</p>
+            <h3>SHOMS - WHITESPRING - SUNNYSIDE</h3>
+            <p>A Promise Kept, For A Better Society!</p>
+            <a href="#">LET'S GO</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+
+      <div class="slide" style="background-image: url('media/students.jpg');">
+        <div class="hero-overlay">
+          <div class="hero content">
+            <img src="" alt="">
+            <p>Welcome To Shoms Schools</p>
+            <h3>SHOMS - WHITESPRING - SUNNYSIDE</h3>
+            <p>A Promise Kept, For A Better Society!</p>
+            <a href="#">LET'S GO</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+
+      <div class="slide" style="background-image: url('media/playing-ground-2.jpg');">
+        <div class="hero-overlay">
+          <div class="hero content">
+            <img src="" alt="">
+            <p>Welcome To Shoms Schools</p>
+            <h3>SHOMS - WHITESPRING - SUNNYSIDE</h3>
+            <p>A Promise Kept, For A Better Society!</p>
+            <a href="#">LET'S GO</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+
+      <div class="slide" style="background-image: url('media/students-2.jpg');">
+        <div class="hero-overlay">
+          <div class="hero content">
+            <img src="" alt="">
+            <p>Welcome To Shoms Schools</p>
+            <h3>SHOMS - WHITESPRING - SUNNYSIDE</h3>
+            <p>A Promise Kept, For A Better Society!</p>
+            <a href="#">LET'S GO</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+
+      <div class="slide" style="background-image: url('media/school-bus.jpg');">
+        <div class="hero-overlay">
+          <div class="hero content">
+            <img src="" alt="">
+            <p>Welcome To Shoms Schools</p>
+            <h3>SHOMS - WHITESPRING - SUNNYSIDE</h3>
+            <p>A Promise Kept, For A Better Society!</p>
+            <a href="#">LET'S GO</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Our Classes Section-->
+
+  <section class="our-classes">
+    <div class="our-classes-container">
+      <div class="our-classes-1">
+        <h3>OUR CLASSES</h3>
+        <p>We make learning fun</p>
+        <p>We're a childcare centre with an engaging curriculum backed by qualified, experienced and Passionate
+          Teachers.</p>
+      </div>
+
+      <div class="our-classes-2">
+        <div class="left">
+          <div class="block-1">
+            <h3>Elementary</h3>
+            <p>For beginners and pupils fresh out of pre-school</p>
+            <img src="" alt="">
+          </div>
+          <div class="block-2">
+            <h3>College</h3>
+            <p>Our Secondary schools are fully equipped with facilities and teachers that will prepare and impact the
+              knowledge and character needed by students to face the world today.</p>
+            <img src="" alt="">
+          </div>
+        </div>
+
+        <div class="middle">
+          <img src="Media/ilupeju-31-1024x683.jpg" alt="">
+        </div>
+
+        <div class="right">
+          <div class="block-3">
+            <img src="" alt="">
+            <h3>Basic</h3>
+            <p>Primary school education is essential in the academic advancement of a child.</p>
+          </div>
+          <div class="block-4">
+            <img src="" alt="">
+            <h3>Foreign Exams</h3>
+            <p>We have also included foreign syllabus and examination like IGSCE, SAT, TOEFL etc in order to accomodate
+              for students who will like to study abroad.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+    const dots = document.querySelectorAll('.indicator'); // This is currently empty in your HTML
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      // 1. Remove active class from CURRENT slide
+      slides[currentSlide].classList.remove('active');
+
+      // Safety check: Only try to remove 'active' from dots if dots exist
+      if (dots.length > 0) {
+        dots[currentSlide].classList.remove('active');
+      }
+
+      // 2. Update the index
+      currentSlide = index;
+
+      // 3. Handle Looping
+      if (currentSlide >= slides.length) {
+        currentSlide = 0;
+      }
+      if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+      }
+
+      // 4. Add active class to NEW slide
+      slides[currentSlide].classList.add('active');
+
+      // Safety check: Only add 'active' to dots if dots exist
+      if (dots.length > 0) {
+        dots[currentSlide].classList.add('active');
+      }
+    }
+
+    nextBtn.addEventListener('click', () => {
+      showSlide(currentSlide + 1);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      showSlide(currentSlide - 1);
+    });
+
+    // Auto-play every 5 seconds
+    setInterval(() => {
+      showSlide(currentSlide + 1);
+    }, 5000);
+
+  </script>
+</body>
+
+</html>
